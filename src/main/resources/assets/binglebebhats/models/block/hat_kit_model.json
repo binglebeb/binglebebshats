@@ -1,9 +1,9 @@
 {
-	"credit": "Made with Blockbench",
+	"credit": "Made by binglebeb",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "binglebebhats:block/hat_kit_texture",
-		"particle": "binglebebhats:block/hat_kit_texture"
+		"0": "binglebebhats:block/hat_kit_model",
+		"particle": "binglebebhats:block/hat_kit_model"
 	},
 	"elements": [
 		{

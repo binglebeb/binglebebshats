@@ -1,0 +1,54 @@
+{
+	"credit": "made by binglebeb",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "hat_stand_texture",
+		"particle": "hat_stand_texture"
+	},
+	"elements": [
+		{
+			"from": [7, 2, 7],
+			"to": [9, 8, 9],
+			"faces": {
+				"north": {"uv": [10, 12, 11, 15], "texture": "#0"},
+				"east": {"uv": [11, 12, 12, 15], "texture": "#0"},
+				"south": {"uv": [12, 12, 13, 15], "texture": "#0"},
+				"west": {"uv": [0, 13, 1, 16], "texture": "#0"},
+				"up": {"uv": [14, 1, 13, 0], "texture": "#0"},
+				"down": {"uv": [2, 13, 1, 14], "texture": "#0"}
+			}
+		},
+		{
+			"from": [3, 0, 3],
+			"to": [13, 2, 13],
+			"faces": {
+				"north": {"uv": [0, 10, 5, 11], "texture": "#0"},
+				"east": {"uv": [0, 11, 5, 12], "texture": "#0"},
+				"south": {"uv": [0, 12, 5, 13], "texture": "#0"},
+				"west": {"uv": [5, 12, 10, 13], "texture": "#0"},
+				"up": {"uv": [5, 5, 0, 0], "texture": "#0"},
+				"down": {"uv": [5, 5, 0, 10], "texture": "#0"}
+			}
+		},
+		{
+			"from": [4, 8, 4],
+			"to": [12, 16, 12],
+			"faces": {
+				"north": {"uv": [5, 0, 9, 4], "texture": "#0"},
+				"east": {"uv": [5, 4, 9, 8], "texture": "#0"},
+				"south": {"uv": [5, 8, 9, 12], "texture": "#0"},
+				"west": {"uv": [9, 0, 13, 4], "texture": "#0"},
+				"up": {"uv": [13, 8, 9, 4], "texture": "#0"},
+				"down": {"uv": [13, 8, 9, 12], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "group",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [0, 1, 2]
+		}
+	]
+}

@@ -2,8 +2,8 @@
 	"credit": "made by binglebeb",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "hat_stand_model",
-		"particle": "hat_stand_model"
+		"0": "hat_stand_block_model",
+		"particle": "hat_stand_block_model"
 	},
 	"elements": [
 		{

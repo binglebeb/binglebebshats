@@ -4,6 +4,13 @@ import com.mojang.logging.LogUtils;
 import net.binglebeb.binglebebhats.block.ModBlocks;
 import net.binglebeb.binglebebhats.item.ModCreativeModeTabs;
 import net.binglebeb.binglebebhats.item.ModItems;
+import net.binglebeb.binglebebhats.particle.ModParticles;
+import net.binglebeb.binglebebhats.sound.ModSounds;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -17,6 +24,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+
+import java.util.Random;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(BinglebebHats.MOD_ID)
@@ -33,9 +42,14 @@ public class BinglebebHats {
 
         ModItems.register(modEventBus);
 
-        ModBlocks.BLOCKS.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+        ModSounds.register(modEventBus);
+
+        ModParticles.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::clientSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -43,22 +57,26 @@ public class BinglebebHats {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
+    private void clientSetup(final FMLClientSetupEvent event) {
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.HAT_KIT_BLOCK.get(), RenderType.cutout());
+    }
     private void commonSetup(final FMLCommonSetupEvent event) {
 
     }
 
-    // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
+    public void tick(BlockState state, Level level, BlockPos pos, Random random) {
+
+    }
+
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
 
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent

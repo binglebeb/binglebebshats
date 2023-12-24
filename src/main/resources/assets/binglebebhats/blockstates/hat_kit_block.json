@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=east": { "model": "binglebebhats:block/hat_kit_block", "y": 270 },
+    "facing=north": { "model": "binglebebhats:block/hat_kit_block", "y": 180 },
+    "facing=south": { "model": "binglebebhats:block/hat_kit_block" },
+    "facing=west": { "model": "binglebebhats:block/hat_kit_block", "y": 90 }
+  }
+}
